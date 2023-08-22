@@ -14,8 +14,8 @@ export const MonthlyFinishingPlan = () => {
 	};
 
 	return (
-		<section className='absolute top-28 max-w-4xl h-min'>
-			<div className='p-10 mx-6 rounded-2xl bg-white'>
+		<section className='top-32 w-full h-[410px] flex justify-center'>
+			<div className='p-10 pb-32 mx-6 w-full max-w-4xl h-[360px] min-h-max rounded-2xl bg-white'>
 				<article className='grid grid-cols-1'>
 					<h1 className='text-4xl font-bold text-blue-900'>Finishing up</h1>
 					<p className='text-2xl mt-4 font-normal text-gray-400'>Double-check everything looks OK before confirming.</p>

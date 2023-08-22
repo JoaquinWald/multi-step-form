@@ -11,8 +11,8 @@ export const PersonalInfo = () => {
 	};
 
 	return (
-		<section className='absolute top-28 max-w-4xl'>
-			<div className='p-10 mx-6 rounded-2xl bg-white'>
+		<section className='top-32 w-full h-screen flex justify-center md:justify-end md:h-min'>
+			<div className='p-10 pb-10 mx-6 w-full max-w-4xl h-max rounded-2xl bg-white md:w-7/12 md:pb-14 md:mr-[56px] md:bg-transparent'>
 				<article className='grid grid-cols-1'>
 					<h1 className='text-4xl font-bold text-blue-900'>Personal info</h1>
 					<p className='text-2xl mt-4 font-normal text-gray-400'>Please, provide your name, email address, and phone number.</p>
@@ -63,7 +63,7 @@ export const PersonalInfo = () => {
 				</article>
 			</div>
 
-			<footer className='fixed bottom-0 flex mt-20 h-[12vh] w-full justify-end items-center bg-gray-50'>
+			<footer className='fixed bottom-0 flex mt-20 h-[12vh] w-full justify-end items-center bg-gray-50 md:absolute md:w-2/3 md:rounded-2xl md:mx-6 md:bg-transparent md:pr-[54px] md:mb-4'>
 				<div onClick={handleNextPage}>
 					<NextStepButton />
 				</div>

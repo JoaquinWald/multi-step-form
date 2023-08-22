@@ -6,7 +6,7 @@ export const PickAddOns = () => {
 	const { monthly } = useContext(PlanContext);
 
 	return (
-		<section className='flex justify-center w-full max-w-4xl'>
+		<section className='flex justify-center w-full h-screen max-w-4xl'>
 			{monthly ? <MontlyPickOnsPlan /> : <YearlyPickOnsPlan />}
 
 			<></>

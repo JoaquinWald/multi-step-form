@@ -5,10 +5,10 @@ import { ThankYou } from '../pages/thank-you/ThankYou';
 
 export const AppRouter = () => {
 	return (
-		<div className='grid w-full'>
+		<div className='w-screen relative md:w-[700px] md:h-[450px] md:m-auto'>
 			<Header />
 
-			<main className=''>
+			<main className='absolute flex justify-center w-full h-full top-36 md:bg-white md:justify-end md:rounded-2xl md:p-4'>
 				<Routes>
 					<Route
 						path='personal-info'

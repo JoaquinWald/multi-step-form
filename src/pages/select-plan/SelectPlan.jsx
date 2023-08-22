@@ -8,7 +8,7 @@ export const SelectPlan = () => {
 	const { monthly } = useContext(PlanContext);
 
 	return (
-		<section className='flex justify-center w-full max-w-4xl'>
+		<section className='relative w-full max-h-min h-screen md:h-full'>
 			{monthly ? <MontlyPlan /> : <YearlyPlan />}
 
 			<MonthlyYearlySwitch />

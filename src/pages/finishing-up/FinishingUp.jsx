@@ -7,7 +7,7 @@ export const FinishingUp = () => {
 	const { monthly } = useContext(PlanContext);
 
 	return (
-		<section className='flex justify-center w-full max-w-4xl'>
+		<section className='flex justify-center w-full h-screen max-w-4xl'>
 			{monthly ? <MonthlyFinishingPlan /> : <YearlyFinishingPlan />}
 
 			<></>
