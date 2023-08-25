@@ -16,4 +16,7 @@ html {
 
 body {
   background-color: #EDF4FE;
+  height: 100vh;
+  display: grid;
+  justify-content: center;
 }

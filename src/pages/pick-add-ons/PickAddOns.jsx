@@ -1,13 +1,12 @@
-import { useContext } from 'react';
 import { MontlyPickOnsPlan, YearlyPickOnsPlan } from './pages';
-import { PlanContext } from '../../context/PlanContext';
+import { useSelector } from 'react-redux';
 
 export const PickAddOns = () => {
-	const { monthly } = useContext(PlanContext);
+	const { monthlyState } = useSelector((state) => state.plan);
 
 	return (
-		<section className='flex justify-center w-full h-screen max-w-4xl'>
-			{monthly ? <MontlyPickOnsPlan /> : <YearlyPickOnsPlan />}
+		<section className='relative w-full max-h-min h-screen md:h-full'>
+			{monthlyState ? <MontlyPickOnsPlan /> : <YearlyPickOnsPlan />}
 
 			<></>
 		</section>

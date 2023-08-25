@@ -14,8 +14,8 @@ export const MonthlyFinishingPlan = () => {
 	};
 
 	return (
-		<section className='top-32 w-full h-[410px] flex justify-center'>
-			<div className='p-10 pb-32 mx-6 w-full max-w-4xl h-[360px] min-h-max rounded-2xl bg-white'>
+		<section className='top-32 w-full h-[410px] flex justify-center md:justify-end md:h-min'>
+			<div className='p-10 pb-32 mx-6 w-full max-w-4xl h-[440px] min-h-max rounded-2xl bg-white md:w-2/3 md:pb-14 md:mr-0 md:bg-transparent md:px-20 md:pl-20'>
 				<article className='grid grid-cols-1'>
 					<h1 className='text-4xl font-bold text-blue-900'>Finishing up</h1>
 					<p className='text-2xl mt-4 font-normal text-gray-400'>Double-check everything looks OK before confirming.</p>
@@ -26,10 +26,10 @@ export const MonthlyFinishingPlan = () => {
 					<section className='flex p-4 mt-4 justify-between items-center rounded-xl'>
 						<div className='flex items-center'>
 							<div className=''>
-								<h3 className='text-2xl font-bold text-blue-900'>Arcade(Monthly)</h3>
+								<h3 className='text-2xl font-bold text-blue-900'>Arcade (Monthly)</h3>
 								<NavLink
 									to='/select-plan'
-									className='text-gray-400 underline text-xl font-medium'
+									className='text-gray-400 underline text-xl font-medium hover:text-blue-600'
 								>
 									Change
 								</NavLink>
@@ -86,7 +86,7 @@ export const MonthlyFinishingPlan = () => {
 					</div>
 				</article>
 			</div>
-			<footer className='fixed bottom-0 flex mt-20 h-[12vh] w-full justify-between items-center bg-gray-50'>
+			<footer className='fixed bottom-0 flex mt-20 h-[12vh] w-full justify-between items-center bg-gray-50 md:absolute md:w-2/3 md:rounded-2xl md:mx-6 md:bg-transparent md:pr-[30px] md:pl-20'>
 				<div onClick={handleBackPage}>
 					<GoBackButton />
 				</div>

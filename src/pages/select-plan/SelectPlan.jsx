@@ -1,15 +1,13 @@
-import { useContext } from 'react';
-import { PlanContext } from '../../context/PlanContext';
-import { MontlyPlan } from './pages/MontlyPlan';
-import { YearlyPlan } from './pages/YearlyPlan';
+import { MontlyPlan, YearlyPlan } from './pages';
 import { MonthlyYearlySwitch } from '../../components';
+import { useSelector } from 'react-redux';
 
 export const SelectPlan = () => {
-	const { monthly } = useContext(PlanContext);
+	const { monthlyState } = useSelector((state) => state.plan);
 
 	return (
 		<section className='relative w-full max-h-min h-screen md:h-full'>
-			{monthly ? <MontlyPlan /> : <YearlyPlan />}
+			{monthlyState ? <MontlyPlan /> : <YearlyPlan />}
 
 			<MonthlyYearlySwitch />
 		</section>

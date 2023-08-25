@@ -2,8 +2,8 @@ import thankImg from '../../assets/images/icon-thank-you.svg';
 
 export const ThankYou = () => {
 	return (
-		<section className='w-full h-max flex justify-center'>
-			<div className='p-10 py-20 mx-6 w-full max-w-4xl h-max min-h-max rounded-2xl bg-white'>
+		<section className='top-32 w-full h-[410px] flex justify-center md:justify-end md:h-min'>
+			<div className='p-10 pb-32 mx-6 w-full max-w-4xl h-[440px] min-h-max rounded-2xl bg-white md:w-2/3 md:pb-14 md:bg-transparent md:px-20 md:pt-40 md:mr-0'>
 				<article className='grid grid-cols-1 justify-items-center'>
 					<figure className='mb-6'>
 						<img
