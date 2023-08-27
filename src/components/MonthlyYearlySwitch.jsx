@@ -10,9 +10,11 @@ export const MonthlyYearlySwitch = () => {
 	};
 
 	return (
-		<article className='-my-20 mx-auto flex justify-center w-max px-6 h-20 rounded-md py-1 bg-blue-400 md:bg-transparent md:absolute md:right-[39px] md:bottom-80'>
+		<article className='-my-20 mx-auto flex justify-center w-max px-6 h-20 rounded-md py-1 md:bg-transparent md:absolute md:right-[39px] md:bottom-80 animate__animated animate__fadeIn'>
 			<div className='flex items-center text-center px-4 p-6 mb-5 mt-12 bg-[#F8F9FE] rounded-md md:w-[350px] md:h-max md:justify-center'>
-				<h3 className='mr-16 text-blue-950 font-bold text-xl md:mr-0'>Monthly</h3>
+				<h3 className={`${monthlyState ? 'mr-16 text-blue-950 font-bold text-xl md:mr-0' : 'mr-16 text-gray-400 font-bold text-xl md:mr-0'}`}>
+					Monthly
+				</h3>
 
 				<label
 					htmlFor='flexSwitchChecked'
@@ -31,7 +33,9 @@ export const MonthlyYearlySwitch = () => {
 					/>
 				</label>
 
-				<h3 className='ml-16 text-blue-950 font-bold text-xl md:ml-0'>Yearly</h3>
+				<h3 className={`${monthlyState ? 'mr-16 text-gray-400 font-bold text-xl md:mr-0' : 'mr-16 text-blue-950 font-bold text-xl md:mr-0'}`}>
+					Yearly
+				</h3>
 			</div>
 		</article>
 	);

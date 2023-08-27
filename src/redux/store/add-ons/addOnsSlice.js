@@ -1,12 +1,12 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const pickAddOnsState = {
-	selectedPlanMonthly: {
+	selectedPlanMonthlyAddOns: {
 		selectedOnlineService: false,
 		selectedLargerStorage: false,
 		selectedCustomizable: false,
 	},
-	selectedPlanYearly: {
+	selectedPlanYearlyAddOns: {
 		selectedOnlineService: false,
 		selectedLargerStorage: false,
 		selectedCustomizable: false,
@@ -19,51 +19,54 @@ export const addOnsSlice = createSlice({
 	initialState: pickAddOnsState,
 
 	reducers: {
-		setOnlineServiceM: (state, action) => {
-			state.selectedPlanMonthly.selectedOnlineService = action.payload;
+		resetAddOns: () => pickAddOnsState,
 
-			state.selectedPlanYearly.selectedOnlineService = false;
-			state.selectedPlanYearly.selectedLargerStorage = false;
-			state.selectedPlanYearly.selectedCustomizable = false;
+		setOnlineServiceM: (state, action) => {
+			state.selectedPlanMonthlyAddOns.selectedOnlineService = action.payload;
+
+			state.selectedPlanYearlyAddOns.selectedOnlineService = false;
+			state.selectedPlanYearlyAddOns.selectedLargerStorage = false;
+			state.selectedPlanYearlyAddOns.selectedCustomizable = false;
 		},
 		setLargerStorageM: (state, action) => {
-			state.selectedPlanMonthly.selectedLargerStorage = action.payload;
+			state.selectedPlanMonthlyAddOns.selectedLargerStorage = action.payload;
 
-			state.selectedPlanYearly.selectedOnlineService = false;
-			state.selectedPlanYearly.selectedLargerStorage = false;
-			state.selectedPlanYearly.selectedCustomizable = false;
+			state.selectedPlanYearlyAddOns.selectedOnlineService = false;
+			state.selectedPlanYearlyAddOns.selectedLargerStorage = false;
+			state.selectedPlanYearlyAddOns.selectedCustomizable = false;
 		},
 		setCustomizableM: (state, action) => {
-			state.selectedPlanMonthly.selectedCustomizable = action.payload;
+			state.selectedPlanMonthlyAddOns.selectedCustomizable = action.payload;
 
-			state.selectedPlanYearly.selectedOnlineService = false;
-			state.selectedPlanYearly.selectedLargerStorage = false;
-			state.selectedPlanYearly.selectedCustomizable = false;
+			state.selectedPlanYearlyAddOns.selectedOnlineService = false;
+			state.selectedPlanYearlyAddOns.selectedLargerStorage = false;
+			state.selectedPlanYearlyAddOns.selectedCustomizable = false;
 		},
 
 		setOnlineServiceY: (state, action) => {
-			state.selectedPlanYearly.selectedOnlineService = action.payload;
+			state.selectedPlanYearlyAddOns.selectedOnlineService = action.payload;
 
-			state.selectedPlanMonthly.selectedOnlineService = false;
-			state.selectedPlanMonthly.selectedLargerStorage = false;
-			state.selectedPlanMonthly.selectedCustomizable = false;
+			state.selectedPlanMonthlyAddOns.selectedOnlineService = false;
+			state.selectedPlanMonthlyAddOns.selectedLargerStorage = false;
+			state.selectedPlanMonthlyAddOns.selectedCustomizable = false;
 		},
 		setLargerStorageY: (state, action) => {
-			state.selectedPlanYearly.selectedLargerStorage = action.payload;
+			state.selectedPlanYearlyAddOns.selectedLargerStorage = action.payload;
 
-			state.selectedPlanMonthly.selectedOnlineService = false;
-			state.selectedPlanMonthly.selectedLargerStorage = false;
-			state.selectedPlanMonthly.selectedCustomizable = false;
+			state.selectedPlanMonthlyAddOns.selectedOnlineService = false;
+			state.selectedPlanMonthlyAddOns.selectedLargerStorage = false;
+			state.selectedPlanMonthlyAddOns.selectedCustomizable = false;
 		},
 		setCustomizableY: (state, action) => {
-			state.selectedPlanYearly.selectedCustomizable = action.payload;
+			state.selectedPlanYearlyAddOns.selectedCustomizable = action.payload;
 
-			state.selectedPlanMonthly.selectedOnlineService = false;
-			state.selectedPlanMonthly.selectedLargerStorage = false;
-			state.selectedPlanMonthly.selectedCustomizable = false;
+			state.selectedPlanMonthlyAddOns.selectedOnlineService = false;
+			state.selectedPlanMonthlyAddOns.selectedLargerStorage = false;
+			state.selectedPlanMonthlyAddOns.selectedCustomizable = false;
 		},
 	},
 });
 
 // Action creators are generated for each case reducer function
-export const { setOnlineServiceM, setLargerStorageM, setCustomizableM, setOnlineServiceY, setLargerStorageY, setCustomizableY } = addOnsSlice.actions;
+export const { resetAddOns, setOnlineServiceM, setLargerStorageM, setCustomizableM, setOnlineServiceY, setLargerStorageY, setCustomizableY } =
+	addOnsSlice.actions;

@@ -35,7 +35,7 @@ export const MontlyPlan = () => {
 	};
 
 	return (
-		<article className='top-32 w-full h-[410px] flex justify-center md:justify-end md:h-min'>
+		<article className='top-32 w-full h-[410px] flex justify-center md:justify-end md:h-min animate__animated animate__fadeIn'>
 			<div className='p-10 pb-32 mx-6 w-full max-w-4xl h-[440px] min-h-max rounded-2xl bg-white md:w-2/3 md:pb-14 md:mr-0 md:bg-transparent md:pl-20'>
 				<article className='grid grid-cols-1'>
 					<h1 className='text-4xl font-bold text-blue-900'>Select your plan</h1>
@@ -46,7 +46,7 @@ export const MontlyPlan = () => {
 					<section
 						onClick={handleArcadePlan}
 						className={`flex p-4 py-6 my-4 items-center rounded-xl border border-gray-200 cursor-pointer ${
-							selectedArcadePlan ? 'bg-[#e3e8ff] border-blue-900' : ''
+							selectedArcadePlan ? 'bg-[#e3e8ff] border-[#3e4a82]' : ''
 						} md:mr-4 md:grid md:w-44 md:h-56 md:px-3 md:py-0 hover:border-blue-800`}
 					>
 						<figure className='m-0 pr-4'>
@@ -65,7 +65,7 @@ export const MontlyPlan = () => {
 					<section
 						onClick={handleAdvancedPlan}
 						className={`flex p-4 py-6 my-4 items-center rounded-xl border border-gray-200 cursor-pointer ${
-							selectedAdvancedPlan ? 'bg-[#e3e8ff] border-blue-900' : ''
+							selectedAdvancedPlan ? 'bg-[#e3e8ff] border-[#3e4a82]' : ''
 						} md:mr-4 md:grid md:w-44 md:h-56 md:px-3 md:py-0 hover:border-blue-800`}
 					>
 						<figure className='m-0 pr-4'>
@@ -84,7 +84,7 @@ export const MontlyPlan = () => {
 					<section
 						onClick={handleProPlan}
 						className={`flex p-4 py-6 my-4 items-center rounded-xl border border-gray-200 cursor-pointer ${
-							selectedProPlan ? 'bg-[#e3e8ff] border-blue-900' : ''
+							selectedProPlan ? 'bg-[#e3e8ff] border-[#3e4a82]' : ''
 						} md:mr-4 md:grid md:w-44 md:h-56 md:px-3 md:py-0 hover:border-blue-800`}
 					>
 						<figure className='m-0 pr-4'>

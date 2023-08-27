@@ -58,7 +58,7 @@ export const PersonalInfo = () => {
 	};
 
 	return (
-		<section className='top-32 w-full h-screen flex justify-center md:justify-end md:h-min'>
+		<section className='top-32 w-full h-screen flex justify-center md:justify-end md:h-min animate__animated animate__fadeIn'>
 			<div className='p-10 pb-10 mx-6 w-full max-w-4xl h-max rounded-2xl bg-white md:w-7/12 md:pb-14 md:mr-[30px] md:bg-transparent'>
 				<article className='grid grid-cols-1'>
 					<h1 className='text-4xl font-bold text-blue-900'>Personal info</h1>

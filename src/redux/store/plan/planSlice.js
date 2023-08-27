@@ -22,6 +22,8 @@ export const planSlice = createSlice({
 	initialState: planMonthlyState,
 
 	reducers: {
+		resetPlan: () => planMonthlyState,
+
 		switchMonthlyState: (state, action) => {
 			state.monthlyState = action.payload;
 		},
@@ -86,6 +88,7 @@ export const planSlice = createSlice({
 
 // Action creators are generated for each case reducer function
 export const {
+	resetPlan,
 	switchMonthlyState,
 	setSelectedArcadePlanM,
 	setSelectedAdvancedPlanM,

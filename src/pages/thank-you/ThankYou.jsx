@@ -1,18 +1,21 @@
+// import { useNavigate } from 'react-router-dom';
 import thankImg from '../../assets/images/icon-thank-you.svg';
 
 export const ThankYou = () => {
+	// const navigate = useNavigate();
+
 	return (
-		<section className='top-32 w-full h-[410px] flex justify-center md:justify-end md:h-min'>
-			<div className='p-10 pb-32 mx-6 w-full max-w-4xl h-[440px] min-h-max rounded-2xl bg-white md:w-2/3 md:pb-14 md:bg-transparent md:px-20 md:pt-40 md:mr-0'>
+		<section className='top-32 w-full h-[410px] flex justify-center md:justify-end md:h-min animate__animated animate__fadeIn'>
+			<div className='p-10 pb-32 pt-32 mx-6 w-full max-w-4xl h-[440px] min-h-max rounded-2xl bg-white md:w-2/3 md:pb-14 md:bg-transparent md:px-20 md:pt-40 md:mr-0'>
 				<article className='grid grid-cols-1 justify-items-center'>
-					<figure className='mb-6'>
+					<figure className='mb-6 animate__animated animate__heartBeat'>
 						<img
 							src={thankImg}
 							alt='thank you image'
 							className='w-20'
 						/>
 					</figure>
-					<h1 className='text-4xl font-bold text-blue-900'>Thank you!</h1>
+					<h1 className='text-4xl font-bold text-blue-900 animate__animated animate__heartBeat'>Thank you!</h1>
 					<p className='text-[1.7rem] mt-8 text-center font-normal text-gray-400'>
 						Thanks for confirming your subscription! <br />
 						We hope you have fun using our platform. If you ever need support, please feel free to email us at support@loremgaming.com.

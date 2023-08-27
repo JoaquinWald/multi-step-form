@@ -8,10 +8,10 @@ export const MontlyPickOnsPlan = () => {
 	const navigate = useNavigate();
 	const dispatch = useDispatch();
 
-	const { selectedPlanMonthly } = useSelector((state) => state.addOns);
-	const selectedOnlineService = selectedPlanMonthly.selectedOnlineService;
-	const selectedLargerStorage = selectedPlanMonthly.selectedLargerStorage;
-	const selectedCustomizable = selectedPlanMonthly.selectedCustomizable;
+	const { selectedPlanMonthlyAddOns } = useSelector((state) => state.addOns);
+	const selectedOnlineService = selectedPlanMonthlyAddOns.selectedOnlineService;
+	const selectedLargerStorage = selectedPlanMonthlyAddOns.selectedLargerStorage;
+	const selectedCustomizable = selectedPlanMonthlyAddOns.selectedCustomizable;
 
 	const onlineServiceRef = useRef();
 	const largerStorageRef = useRef();
@@ -31,7 +31,7 @@ export const MontlyPickOnsPlan = () => {
 	};
 
 	const handleNextPage = () => {
-		if (!(selectedOnlineService || selectedLargerStorage || selectedCustomizable)) return;
+		// if (!(selectedOnlineService || selectedLargerStorage || selectedCustomizable)) return;
 
 		navigate('/finishing-up');
 	};
@@ -41,7 +41,7 @@ export const MontlyPickOnsPlan = () => {
 	};
 
 	return (
-		<section className='top-32 w-full h-[410px] flex justify-center md:justify-end md:h-min'>
+		<section className='top-32 w-full h-[410px] flex justify-center md:justify-end md:h-min animate__animated animate__fadeIn'>
 			<div className='p-10 pb-32 mx-6 w-full max-w-4xl h-[440px] min-h-max rounded-2xl bg-white md:w-2/3 md:pb-14 md:mr-0 md:bg-transparent md:px-20 md:pl-20'>
 				<article className='grid grid-cols-1'>
 					<h1 className='text-4xl font-bold text-blue-900'>Pick add-ons</h1>
@@ -52,7 +52,7 @@ export const MontlyPickOnsPlan = () => {
 					<section
 						onClick={handleOnlineClick}
 						className={`${
-							selectedOnlineService ? 'bg-blue-100 border-blue-800' : ''
+							selectedOnlineService ? 'bg-[#e3e8ff] border-[#3e4a82]' : ''
 						} flex p-4 my-4 justify-between items-center rounded-xl border border-gray-200 cursor-pointer hover:border-blue-800`}
 					>
 						<div className='flex items-center'>
@@ -83,7 +83,7 @@ export const MontlyPickOnsPlan = () => {
 					<section
 						onClick={handleLargerClick}
 						className={`${
-							selectedLargerStorage ? 'bg-blue-100 border-blue-800' : ''
+							selectedLargerStorage ? 'bg-[#e3e8ff] border-[#3e4a82]' : ''
 						} flex p-4 my-4 justify-between items-center rounded-xl border border-gray-200 cursor-pointer hover:border-blue-800`}
 					>
 						<div className='flex items-center'>
@@ -114,7 +114,7 @@ export const MontlyPickOnsPlan = () => {
 					<section
 						onClick={handleCustomizableClick}
 						className={`${
-							selectedCustomizable ? 'bg-blue-100 border-blue-800' : ''
+							selectedCustomizable ? 'bg-[#e3e8ff] border-[#3e4a82]' : ''
 						} flex p-4 my-4 justify-between items-center rounded-xl border border-gray-200 cursor-pointer hover:border-blue-800`}
 					>
 						<div className='flex items-center'>
