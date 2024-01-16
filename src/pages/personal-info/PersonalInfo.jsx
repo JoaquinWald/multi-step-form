@@ -15,9 +15,9 @@ export const PersonalInfo = () => {
 		setFocus,
 	} = useForm({
 		defaultValues: {
-			name: '',
-			email: '',
-			phone: '',
+			name: 'Stephen King',
+			email: 'stephenking@lorem.com',
+			phone: 1234567890,
 		},
 	});
 
@@ -67,10 +67,7 @@ export const PersonalInfo = () => {
 
 				<article className='grid grid-cols-1 mt-10 m-auto'>
 					<form onSubmit={onSubmit}>
-						<label
-							htmlFor='name'
-							className='grid mb-6 font-medium'
-						>
+						<label htmlFor='name' className='grid mb-6 font-medium'>
 							<span className='text-xl pb-1 text-blue-900'>Name</span>
 							<input
 								{...register('name', {
@@ -98,10 +95,7 @@ export const PersonalInfo = () => {
 							{errors.name && <span className='mt-1 font-bold text-red-600'>{errors.name.message}</span>}
 						</label>
 
-						<label
-							htmlFor='email-address'
-							className='grid mb-6 font-medium'
-						>
+						<label htmlFor='email-address' className='grid mb-6 font-medium'>
 							<span className='text-xl pb-1 text-blue-900'>Email Address</span>
 							<input
 								{...register('email', {
@@ -125,10 +119,7 @@ export const PersonalInfo = () => {
 							{errors.email && <span className='mt-1 font-bold text-red-600'>{errors.email.message}</span>}
 						</label>
 
-						<label
-							htmlFor='phone-number'
-							className='grid mb-6 font-medium'
-						>
+						<label htmlFor='phone-number' className='grid mb-6 font-medium'>
 							<span className='text-xl pb-1 text-blue-900'>Phone Number</span>
 							<input
 								{...register('phone', {
@@ -152,12 +143,7 @@ export const PersonalInfo = () => {
 							{errors.phone && <span className='mt-1 font-bold text-red-600'>{errors.phone.message}</span>}
 						</label>
 
-						<button
-							type='submit'
-							className='hidden'
-							ref={buttonRef}
-							disabled={''}
-						></button>
+						<button type='submit' className='hidden' ref={buttonRef} disabled={''}></button>
 					</form>
 				</article>
 			</div>
